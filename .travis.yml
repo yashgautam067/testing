@@ -1,4 +1,4 @@
 dist: focal
 language: shell
-script: echo "Testing travis ci"
+script: echo "Testing travis ci/cd"
 install: skip
