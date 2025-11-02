@@ -1,4 +1,13 @@
-dist: focal
-language: shell
-script: echo "Testing travis ci/cd"
-install: skip
+language: node_js
+node_js:
+  - "18"
+
+install:
+  - npm install
+
+script:
+  - npm test
+
+after_success:
+  # Trigger local machine deployment
+  - curl -X POST https://671747557adb.ngrok-free.app
